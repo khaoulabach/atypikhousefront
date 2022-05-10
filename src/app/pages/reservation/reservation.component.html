@@ -1,0 +1,91 @@
+<div class="header bg-gradient-blue pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="row">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0" style="background: #F6F9FC;">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <h3 class="mb-0">Liste des réservations </h3>
+            </div>
+            <div class="col-4">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input (keyup)="applyFilter($event.target.value)" class="form-control" placeholder="Rechercher">
+              </div>
+              <!-- <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter"> -->
+            </div>
+            <div class="col-4 text-right">
+              <!-- <span class="btn-inner--text">Ajouter</span> -->
+              <!-- <button class="btn btn-icon  btn-3 btn-primary" type="button" (click)="openAddDialog()">
+                <span class="btn-inner--icon"><i class="ni ni-fat-add"></i></span>
+              </button> -->
+              <button class="btn btn-icon btn-3 bg-gradient-green" type="button" style="float: right;"
+                (click)="exportExcel()">
+                <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table mat-table [dataSource]="dataSource" matSort class="table align-items-center table-flush">
+            <!-- statut Column -->
+            <ng-container matColumnDef="statut">
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Statut</th>
+              <td mat-cell *matCellDef="let element"> {{element.statut}} </td>
+            </ng-container>
+            <!-- dateDebut Column -->
+            <ng-container matColumnDef="dateDebut">
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Date Debut </th>
+              <td mat-cell *matCellDef="let element"> {{element.dateDebut | date: 'dd/MM/yyyy'}} </td>
+            </ng-container>
+            <!-- dateFin Column -->
+            <ng-container matColumnDef="dateFin">
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Date Fin </th>
+              <td mat-cell *matCellDef="let element"> {{element.dateFin | date: 'dd/MM/yyyy'}} </td>
+            </ng-container>
+            <!-- bien Column -->
+            <ng-container matColumnDef="bien">
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Bien </th>
+              <td mat-cell *matCellDef="let element"> {{element.bien}} </td>
+            </ng-container>
+            <!-- internaute Column -->
+            <ng-container matColumnDef="internaute">
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Internaute </th>
+              <td mat-cell *matCellDef="let element"> {{element.internaute}} </td>
+            </ng-container>
+            <!-- Action Column -->
+            <ng-container matColumnDef="Action">
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header mat-sort-header>Action</th>
+              <td mat-cell *matCellDef="let element">
+                <!-- <button class="btn btn-icon btn-sm btn-3 btn-outline-primary" (click)="openUpdateDialog(element)"
+                  type="button">
+                  <span class="btn-inner--icon"><i class="ni ni-ruler-pencil"></i></span>
+                </button> -->
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <div class="card-footer py-4">
+          <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="col-xl-12 order-xl-1" style="padding: 0;">
+  <div class="card bg-secondary shadow">
+    <div class="card-header bg-white border-0">
+      <div class="row align-items-center">
+        <div class="col-8">
+          <h3 class="mb-0">Modifier propriété</h3>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" style=" padding: 0.5rem">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+        <div class="pl-lg-4">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-code">Code</label>
+                <input type="text" id="input-code" matInput formControlName="code"
+                  class="form-control form-control-alternative" placeholder="code">
+                <div *ngIf="f.code.invalid && (f.code.dirty || f.code.touched)">
+                  <div *ngIf="f.code.errors.required">
+                    <span class="text-danger">Code est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-description">Description</label>
+                <input type="text" id="input-description" matInput formControlName="description"
+                  class="form-control form-control-alternative" placeholder="description">
+                <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched)">
+                  <div *ngIf="f.description.errors.required">
+                    <span class="text-danger">Description est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-indObligatoire">Indicateur</label>
+                <input type="text" id="input-indObligatoire" matInput formControlName="indObligatoire"
+                  class="form-control form-control-alternative" placeholder="indObligatoire">
+                <div *ngIf="f.indObligatoire.invalid && (f.indObligatoire.dirty || f.indObligatoire.touched)">
+                  <div *ngIf="f.indObligatoire.errors.required">
+                    <span class="text-danger">indicateur est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <!-- <div class="form-group">
+                <label class="form-control-label" for="input-typeBienId">Type Bien</label>
+                <input type="text" id="input-typeBienId" matInput formControlName="typeBienId"
+                  class="form-control form-control-alternative" placeholder="typeBienId">
+                <div *ngIf="f.typeBienId.invalid && (f.typeBienId.dirty || f.typeBienId.touched)">
+                  <div *ngIf="f.typeBienId.errors.required">
+                    <span class="text-danger">Type Bien est obligatoire.</span>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col-12 text-right">
+          <button type="button" (click)="onExit()" class="btn btn-danger">Annuler</button>
+          <button type="submit" class="btn  btn-primary">Modifier</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

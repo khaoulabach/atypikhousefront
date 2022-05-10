@@ -1,0 +1,31 @@
+.bg-gradient-danger {
+    // background: linear-gradient(87deg, #ffffff 0, #ffffff 100%) !important;
+    height: 380px;
+    background-position: right !important;
+    // background-image: url(https://www.heidelbergcement.com/sites/default/files/styles/header_slider/public/assets/images/ait_baha_plant_copyright_ciments_du_maroc.jpg?itok=2lwlXZ3C) !important;
+}
+
+.card-body {
+    background: #f7a800; // #e62f2d;
+    border-radius: 1em;
+}
+
+.bg-gradient-danger-LHM {
+    height: 380px;
+    // background-image: url(../../../assets/img/background.jpg) !important;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-body-LHM {
+    background: #e62f2d;
+    border-radius: 1em;
+}
+
+.bg-secondary {
+    background: none !important;
+}
+
+body {
+    background-color: #ffffff !important;
+}

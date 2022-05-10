@@ -1,0 +1,168 @@
+.p-titre {
+    font-weight: 600;
+    line-height: 2;
+    font-size: larger;
+}
+
+p {
+    line-height: 1.5 !important;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.bg-black {
+    background: black;
+}
+
+.card-stats .card-body {
+    padding: 0.5rem 1.5rem;
+}
+
+.card .card-header .card-title {
+    margin-top: 10px;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}
+
+h5 {
+    font-size: 1.57em;
+}
+
+.avatar {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+
+/**** Header ****/
+
+.card {
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.card:focus,
+.card:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: white;
+}
+
+.card-header-8 {
+    padding: 0.5rem 1.5rem !important;
+}
+
+.card-header-4 {
+    padding: 1rem 1.5rem !important;
+}
+
+.card-icon img {
+    height: 38px;
+}
+
+.card-footer-pad {
+    padding: 1rem 1rem !important;
+}
+
+.libelle {
+    font-size: 20px;
+    margin-left: 25%;
+}
+
+.camion-sortant {
+    font-size: 13px;
+}
+
+.time-ta {
+    font-size: 13px;
+    // float: left;
+}
+
+.col-pad {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+
+.icon-ta {
+    margin-right: 3px;
+    font-size: 15px;
+    color: #0f4e7a;
+}
+
+.badge-header {
+    display: inline-block;
+    padding: .25em .4em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.5em;
+    width: 45px;
+    background-color: #ffffff00;
+    font-size: 16px;
+    color: #084beb;
+    border: 2px solid #084beb;
+}
+
+.badge-warning {
+    color: #aa4646;
+    border: 2px solid #aa4646;
+}
+
+.badge-success {
+    color: #46aa69;
+    border: 2px solid #46aa69;
+}
+
+.badge-info {
+    color: #4677aa;
+    border: 2px solid #4677aa;
+}
+
+
+/**** end Header ****/
+
+.chart {
+    height: 100% !important;
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(87deg, #fb6340 0, #f5365c 100%) !important;
+}
+
+.img_check {
+    height: 60px !important;
+}
+
+.img_check_ {
+    height: 70px !important;
+}
+
+.t_check {
+    font-size: 20px;
+    margin-left: 15%;
+}
+
+.text-green {
+    color: #3cb371 !important;
+}

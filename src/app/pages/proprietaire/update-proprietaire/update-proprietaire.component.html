@@ -1,0 +1,124 @@
+<div class="col-xl-12 order-xl-1" style="padding: 0;">
+  <div class="card bg-secondary shadow">
+    <div class="card-header bg-white border-0">
+      <div class="row align-items-center">
+        <div class="col-8">
+          <h3 class="mb-0">Modifier un propriétaire</h3>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" style=" padding: 0.5rem">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+        <div class="pl-lg-4">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-code">Code</label>
+                <input type="text" id="input-code" matInput formControlName="code"
+                  class="form-control form-control-alternative" placeholder="code">
+                <div *ngIf="f.code.invalid && (f.code.dirty || f.code.touched)">
+                  <div *ngIf="f.code.errors.required">
+                    <span class="text-danger">Code est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-nom">Nom</label>
+                <input type="text" id="input-nom" matInput formControlName="nom"
+                  class="form-control form-control-alternative" placeholder="nom">
+                <div *ngIf="f.nom.invalid && (f.nom.dirty || f.nom.touched)">
+                  <div *ngIf="f.nom.errors.required">
+                    <span class="text-danger">Nom est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-prenom">Prenom</label>
+                <input type="text" id="input-prenom" matInput formControlName="prenom"
+                  class="form-control form-control-alternative" placeholder="prenom">
+                <div *ngIf="f.prenom.invalid && (f.prenom.dirty || f.prenom.touched)">
+                  <div *ngIf="f.prenom.errors.required">
+                    <span class="text-danger">Prenom est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-tel">Tel</label>
+                <input type="text" id="input-tel" matInput formControlName="tel"
+                  class="form-control form-control-alternative" placeholder="tel">
+                <div *ngIf="f.tel.invalid && (f.tel.dirty || f.tel.touched)">
+                  <div *ngIf="f.tel.errors.required">
+                    <span class="text-danger">Tel est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-email">E-mail</label>
+                <input type="text" id="input-email" matInput formControlName="email"
+                  class="form-control form-control-alternative" placeholder="email">
+                <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+                  <div *ngIf="f.email.errors.required">
+                    <span class="text-danger">E-mail est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-role">Role</label>
+                <input type="text" id="input-role" matInput formControlName="role"
+                  class="form-control form-control-alternative" placeholder="role">
+                <div *ngIf="f.role.invalid && (f.role.dirty || f.role.touched)">
+                  <div *ngIf="f.role.errors.required">
+                    <span class="text-danger">Role est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-login">Login</label>
+                <input type="text" id="input-login" matInput formControlName="login"
+                  class="form-control form-control-alternative" placeholder="login">
+                <div *ngIf="f.login.invalid && (f.login.dirty || f.login.touched)">
+                  <div *ngIf="f.login.errors.required">
+                    <span class="text-danger">Login est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label" for="input-password">Password</label>
+                <input type="password" id="input-password" matInput formControlName="password"
+                  class="form-control form-control-alternative" placeholder="password">
+                <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)">
+                  <div *ngIf="f.password.errors.required">
+                    <span class="text-danger">Password est obligatoire.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col-12 text-right">
+          <button type="button" (click)="onExit()" class="btn btn-danger">Annuler</button>
+          <button type="submit" class="btn  btn-primary">Modifier</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

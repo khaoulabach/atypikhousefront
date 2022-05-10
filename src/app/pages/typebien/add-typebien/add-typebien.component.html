@@ -1,0 +1,47 @@
+<div class="col-xl-12 order-xl-1" style="padding: 0;">
+    <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <h3 class="mb-0">Ajouter un type bien</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body" style=" padding: 0.5rem">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+                <!-- <h6 class="heading-small text-muted">Informations du société</h6> -->
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-description">Description</label>
+                                <input type="text" id="input-description" matInput formControlName="description" class="form-control form-control-alternative" placeholder="description">
+                                <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched)">
+                                    <div *ngIf="f.description.errors.required">
+                                        <span class="text-danger">Description est obligatoire.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-descriptionAbrege">Description Abrege</label>
+                                <input type="text" id="input-descriptionAbrege" matInput formControlName="descriptionAbrege" class="form-control form-control-alternative" placeholder="descriptionAbrege">
+                                <div *ngIf="f.descriptionAbrege.invalid && (f.descriptionAbrege.dirty || f.descriptionAbrege.touched)">
+                                    <div *ngIf="f.descriptionAbrege.errors.required">
+                                        <span class="text-danger">Description Abrege est obligatoire.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-12 text-right">
+                    <button type="button" (click)="onExit()" class="btn btn-danger">Annuler</button>
+                    <button type="submit" class="btn  btn-primary">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

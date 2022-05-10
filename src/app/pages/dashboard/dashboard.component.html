@@ -1,0 +1,157 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+        <div class="header-body">
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt--7">
+    <div class="row">
+        <div class="col-xl-12 mb-5 mb-xl-0">
+            <div class="card">
+                <div class="card-header card-header-8">
+                    <h2 class="card-title">Statistique
+                        <a target="_blank" href="#" style="font-size: 13px;"></a>
+                    </h2>
+
+                </div>
+                <div class="card-body" style="padding: 0.5em 1.5em;">
+                    <div class="row">
+                        <div class="col-xl-6 mt-5">
+                            <ul class="list-unstyled team-members">
+                                <li class="mb-3">
+                                    <div class="row">
+                                        <div class="col-md-2 col-2">
+                                            <div class="avatar">
+                                                <i class="fa fa-id-badge" style="font-size: medium; color: #5e72e4;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-ms-4 col-4">
+                                            <p>Visiteurs
+                                            </p>
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span>
+                                                <small>Total</small>
+                                            </span>
+                                            <br /> {{nbrVisiteursEntrant + nbrVisiteursSortant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-green">
+                                                <small>Entrant</small>
+                                            </span>
+                                            <br /> {{nbrVisiteursEntrant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-primary">
+                                                <small>Sortant</small>
+                                            </span>
+                                            <br /> {{nbrVisiteursSortant}}
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="row">
+                                        <div class="col-md-2 col-2">
+                                            <div class="avatar">
+                                                <i class="fa fa-id-card" style="font-size: medium; color: #5e72e4;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-ms-4 col-4">
+                                            <p>Propriétaire </p>
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span>
+                                                <small>Total</small>
+                                            </span>
+                                            <br /> {{nbrPropreEntrant + nbrPropreSortant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-green">
+                                                <small>Entrant</small>
+                                            </span>
+                                            <br /> {{nbrPropreEntrant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-primary">
+                                                <small>Sortant</small>
+                                            </span>
+                                            <br /> {{nbrPropreSortant}}
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="row">
+                                        <div class="col-md-2 col-2">
+                                            <div class="avatar">
+                                                <i class="fa fa-users" style="font-size: medium; color: #5e72e4;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-ms-4 col-4">
+                                            <p>Propriétés
+                                            </p>
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span>
+                                                <small>Total</small>
+                                            </span>
+                                            <br /> {{nbrSousTraitantEntrant + nbrSousTraitantSortant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-green">
+                                                <!--class="text-success" -->
+                                                <small>Entrant</small>
+                                            </span>
+                                            <br /> {{nbrSousTraitantEntrant }}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-primary">
+                                                <!--class="text-danger" -->
+                                                <small>Sortant</small>
+                                            </span>
+                                            <br /> {{nbrSousTraitantSortant }}
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="row">
+                                        <div class="col-md-2 col-2">
+                                            <div class="avatar">
+                                                <i class="fa fa-user" style="font-size: medium; color: #5e72e4;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-ms-4 col-4">
+                                            <p>Réservation </p>
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span>
+                                                <small>Total</small>
+                                            </span>
+                                            <br /> {{nbrStagiairesEntrant + nbrStagiairesSortant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-green">
+                                                <small>Entrant</small>
+                                            </span>
+                                            <br /> {{nbrStagiairesEntrant}}
+                                        </div>
+                                        <div class="col-md-2 col-2 text-right">
+                                            <span class="text-primary">
+                                                <small>Sortant</small>
+                                            </span>
+                                            <br /> {{nbrStagiairesSortant}}
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="chart">
+                                <!-- <canvas id="chartHumain"></canvas> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="header bg-gradient-danger-LHM py-6 py-lg-6">
+    <div class="container">
+        <div class="header-body text-center mb-3">
+            <div class="row justify-content-center">
+                <!-- <div class="col-lg-5 col-md-6">
+                    <a class="navbar-brand" routerLinkActive="active" [routerLink]="['/login']">
+                        <img src="assets/img/brand/argon-white.png" height="120px" />
+                    </a>
+                    <h1 class=" mt-1 ">I-secure</h1>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+    </div>
+</div>
+<!-- Page content -->
+<div class="container mt--5 pb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7">
+            <div class="card bg-secondary shadow border-0">
+                <div class="card-body-LHM px-lg-5 py-lg-5">
+                    <div class="text-center text-muted mb-4">
+                        <h1 style="color: white;">AtypikHouse</h1>
+                        <small style="color: white;">Entrez votre nom d'utilisateur et mot de passe pour accéder au plateforme</small>
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+                        <div class="form-group mb-3">
+                            <div class="input-group input-group-alternative">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                </div>
+                                <input class="form-control" placeholder="Nom d'utilisateur" type="text" formControlName="Login">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                </div>
+                                <input class="form-control" placeholder="Mot de passe" type="password" formControlName="Password">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary my-4">Se connecter</button>
+                        </div>
+                        <div class="text-center p-t-12">
+                            <span class="txt1" style="color: white;"> {{message}}</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
