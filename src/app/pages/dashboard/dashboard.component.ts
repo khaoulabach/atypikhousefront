@@ -28,10 +28,10 @@ export class DashboardComponent implements OnInit {
   
   USER;
   humains: any;
-  nbrVisiteursEntrant=0; nbrVisiteursSortant=0;
-  nbrPropreEntrant=0; nbrPropreSortant=0;
-  nbrSousTraitantEntrant=0; nbrSousTraitantSortant=0;
-  nbrStagiairesEntrant=0; nbrStagiairesSortant=0;
+  nbrVisiteursEntrant=10; nbrVisiteursSortant=15;
+  nbrPropreEntrant=12; nbrPropreSortant=0;
+  nbrSousTraitantEntrant=10; nbrSousTraitantSortant=0;
+  nbrStagiairesEntrant=20; nbrStagiairesSortant=0;
  
   nbrTransportsEntrant=0; nbrTransportsSortant=0;
   nbrVehiculesEntrant=0; nbrVehiculesSortant=0;

@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if(this.etat == true) {
           localStorage.setItem('isLoggedIn', "true");
           localStorage.setItem('token', this.f.Login.value);
-          this.dataService.changeUser(this.USER);
+          // this.dataService.changeUser(this.USER);
           localStorage.setItem('visiteur', "false");
           //this.router.navigate(["/dashboard"]);
           switch (this.USER.role) {
@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if(data){
           this.etat=true ; 
           localStorage.setItem('user', JSON.stringify(data));
-          this.USER =  data;
+          // this.USER =  data;
         }    
         else
           this.etat= false; 

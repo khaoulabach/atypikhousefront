@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Propriete } from 'src/app/models/Propriete';
 import { RechercheBien } from 'src/app/models/RechercheBien';
+import { AuthService } from 'src/app/services/auth.service';
 import { BienService } from 'src/app/services/bien.service';
 import { TypebienService } from 'src/app/services/typebien.service';
 
@@ -16,14 +18,23 @@ export class HebergementComponent implements OnInit {
   constructor(public typeBienService: TypebienService,
     public service: BienService,
     private formBuilder: FormBuilder,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService,
+    private authService: AuthService,
+    private router: Router) { }
 
   typeBiens = [];
   biens = [];
   rechercheBien;
   form: FormGroup;
 
+  internaute ;
+  internauteId;
   ngOnInit() {
+    
+    this.internauteId = Number.parseInt( localStorage.getItem('id'));
+    this.internaute = localStorage.getItem('login');
+    console.log(this.internauteId);
+    console.log(this.internaute);
     this.createForm();
     this.getAsyncData();
   }
@@ -32,8 +43,8 @@ export class HebergementComponent implements OnInit {
 
   createForm() {
     this.form = this.formBuilder.group({
-      prixMin: [0],
-      prixMax: [0],
+      prixMin: [],
+      prixMax: [],
       type: [''],
       // typeBienId:[''],
     });
@@ -55,5 +66,10 @@ export class HebergementComponent implements OnInit {
     }, err => {
       console.log(err);
     });
+  }
+  logout(): void {
+    console.log("Logout");
+    this.authService.logout();
+    this.router.navigate(['/connexion']);
   }
 }

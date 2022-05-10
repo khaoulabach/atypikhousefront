@@ -123,10 +123,12 @@
                 <li class="nav-item">
                     <a class="nav-link " routerLinkActive="active" [routerLink]="['/inscription']">Inscription</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="!internaute">
                     <a class="nav-link " routerLinkActive="active" [routerLink]="['/connexion']">Connexion</a>
                 </li>
-
+                <li class="nav-item" *ngIf="internaute">
+                    <a class="nav-link " href="javascript:void(0);" (click)="logout()">Deconnexion</a>
+                </li>
             </ul>
         </div>
 
